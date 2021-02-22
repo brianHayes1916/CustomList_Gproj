@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    class CustomMadeList
+    public class CustomMadeList<T>
     {
+        public void Add(<T>)
+        {
+
+        }
     }
 }
