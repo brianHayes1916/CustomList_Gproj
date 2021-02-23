@@ -77,6 +77,17 @@ namespace UnitTestProjectAdd
         }
 
         [TestMethod]
-        public void Add_Item_
+        public void Add_Item_CorrectIndex()
+        {
+            CustomMadeList<int> customMadeList = new CustomMadeList<int>();
+            int expected = 2;
+            int actual;
+            // act
+            customMadeList.Add(0);
+            customMadeList.Add(2);
+            actual = customMadeList.items[1];
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
