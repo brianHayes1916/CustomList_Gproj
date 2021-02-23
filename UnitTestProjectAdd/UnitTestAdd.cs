@@ -15,17 +15,42 @@ namespace UnitTestProjectAdd
         {
             //arange
             CustomMadeList<int> customMadeList = new CustomMadeList<int>();
-            int count = customMadeList.Count;
-            int expectedResult = count + 1;
+            int expectedResult = 1;
             int actualResult;
             //act
             customMadeList.Add(1);
-            actualResult = customMadeList.Count;
+            actualResult = customMadeList.CountItems;
             //assert
             Assert.AreEqual(expectedResult, actualResult);
         }
-        public void Add_Item_IndexSameAsCount()
+        [TestMethod]
+        public void Add_Item_CapacityOfFour()
         {
+            //arange
+            CustomMadeList<int> customMadeList = new CustomMadeList<int>();
+            int expectedResult = 4;
+            int actualResult;
+            //act
+            customMadeList.Add(1);
+            actualResult = customMadeList.Capacity;
+            //assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        public void Add_Item_CapasityGrows()
+        {
+            //arange
+            CustomMadeList<int> customMadeList = new CustomMadeList<int>();
+            int expacted = 8;
+            int actual;
+            //act
+            customMadeList.Add(1);
+            customMadeList.Add(1);
+            customMadeList.Add(1);
+            customMadeList.Add(1);
+            customMadeList.Add(1);
+            actual = customMadeList.Capacity;
+            //assert
+            Assert.AreEqual(expacted, actual);
         }
     }
 }
