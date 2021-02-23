@@ -36,6 +36,8 @@ namespace UnitTestProjectAdd
             //assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [TestMethod]
         public void Add_Item_CapasityGrows()
         {
             //arange
@@ -52,5 +54,29 @@ namespace UnitTestProjectAdd
             //assert
             Assert.AreEqual(expacted, actual);
         }
+
+        [TestMethod]
+        public void Add_Item_ItemExists()
+        {
+            CustomMadeList<int> customMadeList = new CustomMadeList<int>();
+            bool expected = true;
+            bool actual;
+            //act
+            customMadeList.Add(1);
+            foreach(int num in customMadeList.items)
+            {
+                if(num == 1)
+                {
+                    actual = true;
+                    break;
+                }
+                actual = false;
+            }
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Add_Item_
     }
 }
