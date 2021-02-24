@@ -37,5 +37,23 @@ namespace UnitTestProjectAdd
             //assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Remove_Item_CapacityShrink()
+        {
+            //arange
+            CustomMadeList<int> customMadeList = new CustomMadeList<int>();
+            for(int i = 0; i <= 4; i++)
+            {
+                customMadeList.Add(1);
+            }
+            int expected = 4;
+            int actual;
+            //act
+            customMadeList.Remove(1);
+            actual = customMadeList.Capacity;
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
