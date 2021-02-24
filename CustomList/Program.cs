@@ -13,6 +13,9 @@ namespace CustomList
             List<int> test = new List<int>();
             test.Add(1);
             test.Add(1);
+            test.Add(1);
+            test.Add(1);
+            test.Add(1);
             test.Remove(1);
         }
     }
