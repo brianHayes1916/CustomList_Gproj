@@ -72,5 +72,20 @@ namespace UnitTestProjectAdd
             //assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Remove_Item_RemovedIntIsZero()
+        {
+            //arange
+            CustomMadeList<int> customMadeList = new CustomMadeList<int>();
+            customMadeList.Add(1);
+            int expected = 0;
+            int actual;
+            //act
+            customMadeList.Remove(1);
+            actual = customMadeList[0];
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
