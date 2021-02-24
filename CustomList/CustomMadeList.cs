@@ -27,14 +27,35 @@ namespace CustomList
             }
         }
 
+        public int Count
+        {
+            get
+            {
+                return count;
+            }
+        }
+
         public void Add(T newItem)
         {
-
+            if(count == capacity)
+            {
+                capacity = capacity * 2;
+                T[] arrayHolder = new T[capacity];
+                int indexHolder = 0;
+                foreach(T item in items)
+                {
+                    arrayHolder[indexHolder] = item;
+                    indexHolder++;
+                }
+                items = arrayHolder;
+            }
+            items[count] = newItem;
+            count++;
         }
 
-        public int CountItems()
-        {
+        //public int CountItems()
+        //{
 
-        }
+        //}
     }
 }

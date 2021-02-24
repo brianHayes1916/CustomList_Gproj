@@ -19,7 +19,7 @@ namespace UnitTestProjectAdd
             int actualResult;
             //act
             customMadeList.Add(1);
-            actualResult = customMadeList.CountItems;
+            actualResult = customMadeList.Count;
             //assert
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -55,39 +55,38 @@ namespace UnitTestProjectAdd
             Assert.AreEqual(expacted, actual);
         }
 
-        [TestMethod]
-        public void Add_Item_ItemExists()
-        {
-            CustomMadeList<int> customMadeList = new CustomMadeList<int>();
-            bool expected = true;
-            bool actual;
-            //act
-            customMadeList.Add(1);
-            foreach(int num in customMadeList.items)
-            {
-                if(num == 1)
-                {
-                    actual = true;
-                    break;
-                }
-                actual = false;
-            }
-            //assert
-            Assert.AreEqual(expected, actual);
-        }
+        //[TestMethod]
+        //public void Add_Item_ItemExists()
+        //{
+        //    CustomMadeList<int> customMadeList = new CustomMadeList<int>();
+        //    bool expected = true;
+        //    bool actual = false;
+        //    //act
+        //    customMadeList.Add(1);
+        //    foreach(int num in customMadeList)
+        //    {
+        //        if(num == 1)
+        //        {
+        //            actual = true;
+        //            break;
+        //        }
+        //    }
+        //    //assert
+        //    Assert.AreEqual(expected, actual);
+        //}
 
-        [TestMethod]
-        public void Add_Item_CorrectIndex()
-        {
-            CustomMadeList<int> customMadeList = new CustomMadeList<int>();
-            int expected = 2;
-            int actual;
-            // act
-            customMadeList.Add(0);
-            customMadeList.Add(2);
-            actual = customMadeList.items[1];
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
+        //[TestMethod]
+        //public void Add_Item_CorrectIndex()
+        //{
+        //    CustomMadeList<int> customMadeList = new CustomMadeList<int>();
+        //    int expected = 2;
+        //    int actual;
+        //    // act
+        //    customMadeList.Add(0);
+        //    customMadeList.Add(2);
+        //    actual = customMadeList[1];
+        //    //Assert
+        //    Assert.AreEqual(expected, actual);
+        //}
     }
 }
