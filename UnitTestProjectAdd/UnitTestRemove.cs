@@ -74,6 +74,7 @@ namespace UnitTestProjectAdd
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Remove_Item_RemovedIntIsZero()
         {
             //arange
@@ -84,8 +85,6 @@ namespace UnitTestProjectAdd
             //act
             customMadeList.Remove(1);
             actual = customMadeList[0];
-            //Assert
-            Assert.AreEqual(expected, actual);
         }
     }
 }

@@ -52,6 +52,7 @@
     <Compile Include="UnitTestRemove.cs" />
     <Compile Include="UnitTestAdd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTestToString.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CustomList\CustomList.csproj">

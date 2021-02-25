@@ -53,9 +53,26 @@ namespace CustomList
             count++;
         }
 
-        //public int CountItems()
-        //{
-
-        //}
+        public void Remove(T itemToBeRemoved) 
+        {
+            for(int i = 0; i > count; i++)
+            {
+                if (items[i].Equals(itemToBeRemoved))
+                {
+                    for(int j = i; j > count; j++)
+                    {
+                        if(j == count)
+                        {
+                            items[j] = default(T);
+                            break;
+                        }
+                        else
+                        {
+                            items[j] = items[j + 1];
+                        }
+                    }
+                }
+            }
+        }
     }
 }
