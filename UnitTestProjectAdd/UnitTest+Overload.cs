@@ -76,6 +76,20 @@ namespace UnitTestProjectAdd
         }
 
         [TestMethod]
-        public void PlusOverload_Item_
+        public void PlusOverload_Item_CorrectCountWithString()
+        {
+            //arrange
+            CustomMadeList<string> customMadeList = new CustomMadeList<string>();
+            customMadeList.Add("1");
+            CustomMadeList<string> customMadeList2 = new CustomMadeList<string>();
+            customMadeList2.Add("2");
+            int expected = 2;
+            int actual;
+            //act
+            CustomMadeList<string> customMadeList3 = customMadeList2 + customMadeList;
+            actual = customMadeList3.Count;
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
