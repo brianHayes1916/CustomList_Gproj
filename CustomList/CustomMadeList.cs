@@ -19,6 +19,12 @@ namespace CustomList
             items = new T[capacity];
         }
 
+        public T this[int index]
+        {
+            get => items[index];
+            set => items[index] = value;
+        }
+
         public int Capacity
         {
             get
@@ -64,6 +70,7 @@ namespace CustomList
                         if(j == count)
                         {
                             items[j] = default(T);
+                            count--;
                             break;
                         }
                         else
