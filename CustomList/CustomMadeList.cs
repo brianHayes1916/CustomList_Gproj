@@ -61,11 +61,11 @@ namespace CustomList
 
         public void Remove(T itemToBeRemoved) 
         {
-            for(int i = 0; i > count; i++)
+            for(int i = 0; i <= count; i++)
             {
                 if (items[i].Equals(itemToBeRemoved))
                 {
-                    for(int j = i; j > count; j++)
+                    for(int j = i; j <= count; j++)
                     {
                         if(j == count)
                         {
