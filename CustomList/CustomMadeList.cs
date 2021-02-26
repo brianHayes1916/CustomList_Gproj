@@ -81,5 +81,16 @@ namespace CustomList
                 }
             }
         }
+
+        public override string ToString()
+        {
+            string stringToReturn = "";
+            for(int i = 0; i <= count; i++)
+            {
+                string stringHolder = items[i].ToString();
+                stringToReturn += ($"{stringHolder}, ");
+            }
+            return stringToReturn;
+        }
     }
 }
